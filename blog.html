@@ -2,57 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>My Blog</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 1em;
-      margin: 0;
-      background-color: #fff;
-      color: #333;
-    }
-    .menu {
-      background-color: #f4f4f4;
-      padding: 10px;
-    }
-    .menu a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: #333;
-    }
-    .post {
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-    }
-    .post h2 {
-      margin: 0;
-    }
-    .post p {
-      margin: 5px 0 0;
-    }
-  </style>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔍 Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQ7JSGT8RN');
+  </script>
 </head>
 <body>
+  <header>
+    <h1>📝 My Blog</h1>
+    <p>Welcome to my blog section! I share useful posts, thoughts, and more.</p>
+  </header>
 
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html"><strong>Blog</strong></a>
-    <a href="gallery.html">Gallery</a>
-    <a href="faq.html">FAQ</a>
-  </div>
+  <main>
+    <section class="blog-posts">
+      <article>
+        <h2>Coming Soon</h2>
+        <p>I will publish useful articles and updates here regularly. Stay tuned!</p>
+      </article>
+    </section>
+  </main>
 
-  <h1>Welcome to My Blog 💖</h1>
-  <p>This section will be regularly updated with stories, updates and thoughts.</p>
-
-  <div class="post">
-    <h2>Test Post Title</h2>
-    <p>This is a test blog post. Real stories coming soon!</p>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
 </body>
 </html>
