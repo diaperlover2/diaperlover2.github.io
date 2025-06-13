@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Mani Meshkinpoor</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQ7JSGT8RN');
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu-btn {
+      cursor: pointer;
+      font-size: 24px;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #222;
+      color: white;
+      transition: right 0.3s ease-in-out;
+      padding-top: 60px;
+    }
+    .sidebar a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #444;
+    }
+    .sidebar a:hover {
+      background: #444;
+    }
+    .sidebar.open {
+      right: 0;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    .overlay.show {
+      display: block;
+    }
+    main {
+      padding: 20px;
+    }
+    .donate-box {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff0f0;
+      border: 1px solid #ffaaaa;
+      border-radius: 10px;
+    }
+    .donate-box a {
+      color: #d00;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>About Me 👤</div>
+    <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
+  </header>
+
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About Me</a>
+    <a href="contact.html">📬 Contact</a>
+    <a href="donate.html">💸 Help</a>
+  </div>
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+  <main>
+    <h1>Hello, I'm Mani Meshkinpoor 🌍</h1>
+    <p>
+      I'm from Iran. Aside from my country's struggles, I live under a strict and abusive family. My real name is hidden for safety reasons.
+    </p>
+    <p>
+      I’ve suffered mostly emotional abuse — forbidden from education or working. I'm 20 now, and people over 18 in Iran rarely receive help.
+    </p>
+    <p>
+      I urgently need financial support to escape this life and seek asylum. I tried once by going to Turkey, but I couldn’t stay because I ran out of money.
+    </p>
+    <p>
+      I don’t even own a computer. I created this blog only with my phone using Termux and ChatGPT (free version)! 💪📱
+    </p>
+    <div class="donate-box">
+      💖 <strong>If you wish to help me survive:</strong><br>
+      My USDT TRC20 Wallet: <code>TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</code><br>
+      <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank">Click to Donate via Trust Wallet</a>
+    </div>
+    <p>
+      Even $1 means the world to me. If you can’t help, please don’t report this page — I worked so hard to build it 🙏
+    </p>
+    <p>
+      📌 You can contact me here:<br>
+      Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank">@Survival_Talisman_admin</a><br>
+      X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank">@I_am_ABDL_2005</a>
+    </p>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
