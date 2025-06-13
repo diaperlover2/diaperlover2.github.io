@@ -2,18 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Me - Mani Meshkinpour</title>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LQ7JSGT8RN');
-  </script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
   <style>
     body {
       margin: 0;
@@ -42,7 +32,6 @@
       color: white;
       transition: right 0.3s ease-in-out;
       padding-top: 60px;
-      z-index: 10;
     }
     .sidebar a {
       display: block;
@@ -65,7 +54,6 @@
       height: 100%;
       background: rgba(0, 0, 0, 0.5);
       display: none;
-      z-index: 5;
     }
     .overlay.show {
       display: block;
@@ -73,32 +61,44 @@
     main {
       padding: 20px;
     }
+    .contact-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div>Mani Meshkinpour 📬</div>
+    <div>Contact Me 💬</div>
     <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
   </header>
-
   <div id="sidebar" class="sidebar">
     <a href="index.html">🏠 Home</a>
     <a href="about.html">👤 About Me</a>
     <a href="contact.html">📬 Contact</a>
     <a href="donate.html">💸 Support Me</a>
   </div>
-
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
   <main>
-    <h1>Contact Me 📨</h1>
-    <p>If you want to reach out, here are my contact methods:</p>
-    <ul>
-      <li>📧 Email: <b>diaperloveradultbaby5@gmail.com</b></li>
-      <li>📱 Telegram: <b>t.me/Survival_Talisman_admin</b></li>
-      <li>📱 X: <b>x.com/I_am_ABDL_2005</b></li>
-    </ul>
-    <p>A contact form will be added soon!</p>
+    <h1>Let's Talk!</h1>
+    <div class="contact-info">
+      <p>📧 Email: <a href="mailto:diaperloveradultbaby5@gmail.com">diaperloveradultbaby5@gmail.com</a></p>
+      <p>📱 Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank">@Survival_Talisman_admin</a></p>
+      <p>🐦 X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank">@I_am_ABDL_2005</a></p>
+    </div>
   </main>
 
   <script>
