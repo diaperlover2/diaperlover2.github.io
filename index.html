@@ -127,3 +127,36 @@
 
 <div style="margin-top: 600px;"></div>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensures the image stays on top of other elements */
+        }
+        .banner img {
+            width: 100%;
+            height: auto; /* Maintains image aspect ratio */
+            object-fit: cover; /* Keeps the image clear and fills the space */
+        }
+        .content {
+            margin-top: 600px; /* Pushes content below the banner */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="my-image.jpg" alt="Site Banner">
+    </div>
+    <div class="content">
+        <!-- Rest of your website content goes here -->
+    </div>
+</body>
+</html>
