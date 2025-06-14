@@ -1,98 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate to Support</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Help</title>
+  <meta name="description" content="Support me with a crypto donation.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQ7JSGT8RN');
+  </script>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
       color: #333;
-      padding: 20px;
+      line-height: 1.6;
+      padding: 40px 20px 100px 20px;
     }
     h1 {
+      color: #c62828;
       text-align: center;
-      color: #FF6347;
+      margin-bottom: 20px;
     }
-    .donation-info {
-      text-align: center;
-      margin-top: 20px;
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
-    .donate-btn {
-      background-color: #FF6347;
+    .donate-box {
+      background-color: #e53935;
       color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      text-align: center;
     }
-    .donate-btn:hover {
-      background-color: #e5533d;
+    .donate-box p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .donate-box .wallet {
+      font-family: monospace;
+      word-break: break-all;
+      font-size: 14px;
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .donate-box a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: white;
+      color: #e53935;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .donate-box a:hover {
+      background: #ffe5e5;
     }
   </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID-HERE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LQ7JSGT8RN');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "My Personal Blog",
-  "url": "https://diaperlover2.github.io",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://diaperlover2.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<meta name="description" content="Support me if you like my work. Every little help is appreciated and makes a difference." />
 </head>
 <body>
-  <h1>Support My Work 💖</h1>
-  <div class="donation-info">
-    <p>If you appreciate the content and want to support me, consider making a donation. Your support means the world to me! 💪</p>
-    <button class="donate-btn" onclick="window.location.href='https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'">
-      Donate via Trust Wallet
-    </button>
+  <div class="container">
+    <h1>How to Help</h1>
+    <p>
+      Hello dear visitor, <br>
+      I created this website to share my real story with the world and to seek support from kind-hearted people like you.
+      Every little bit helps me survive, grow, and pursue a better future.
+    </p>
+    <p>
+      If you believe in kindness, fairness, and helping someone in need — this is your chance to make a real difference.
+      You can support me with a crypto donation, which is fast, secure, and direct.
+    </p>
+
+    <div class="donate-box">
+      <p>💖 Support Me with a Donation</p>
+      <p><strong>USDT (TRC20) Address:</strong></p>
+      <div class="wallet">TLkjzNUKZPACtQZQou21diMzCGjae1nbeu</div>
+      <a href="https://link.trustwallet.com/send?coin=2000&address=TLkjzNUKZPACtQZQou21diMzCGjae1nbeu" target="_blank">
+        Send with Trust Wallet →
+      </a>
+    </div>
   </div>
 </body>
-<!-- Fixed Donation Box -->
-<div style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #e53935;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  max-width: 300px;
-  font-family: sans-serif;
-">
-  <p style="margin: 0 0 10px 0; font-weight: bold;">💖 Support me with a donation:</p>
-  <p style="word-break: break-all; font-size: 14px;">
-    <strong>USDT (TRC20):</strong><br>
-    TLkjzNUKZPACtQZQou21diMzCGjae1nbeu
-  </p>
-  <a href="donate.html" style="
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background-color: white;
-    color: #e53935;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-  ">Donate Page →</a>
-</div>
 </html>
