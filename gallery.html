@@ -49,17 +49,16 @@
   </script>
 </head>
 <body>
-<div id="sidebar" class="sidebar">  
-  <a href="index.html">🏠 Home</a>  
-  <a href="about.html">👤 About Me</a>  
-  <a href="blog.html">📝 Blog</a>  
-  <a href="contact.html">📬 Contact</a>  
-  <a href="donate.html">💸 Donate</a>  
-  <a href="gallery.html">🖼️ Gallery</a>  
-  <a href="faq.html">❓ FAQ</a>  
-</div>
+<div id="menu-placeholder"></div>
   <h1>My Gallery</h1>
   <a href="my-media.html">📷 My Media</a>
   <a href="favorite-media.html">🌟 Favorite Media</a>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </body>
 </html>

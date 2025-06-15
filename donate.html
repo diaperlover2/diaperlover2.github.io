@@ -74,15 +74,7 @@
   </script>
 </head>
 <body>
-<div id="sidebar" class="sidebar">  
-  <a href="index.html">🏠 Home</a>  
-  <a href="about.html">👤 About Me</a>  
-  <a href="blog.html">📝 Blog</a>  
-  <a href="contact.html">📬 Contact</a>  
-  <a href="donate.html">💸 Donate</a>  
-  <a href="gallery.html">🖼️ Gallery</a>  
-  <a href="faq.html">❓ FAQ</a>  
-</div>
+<div id="menu-placeholder"></div>
   <h1>Donate</h1>
 
   <p>Hello dear visitor,</p>
@@ -126,5 +118,12 @@
     background-color: #45a049;
   }
 </style>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </body>
 </html>

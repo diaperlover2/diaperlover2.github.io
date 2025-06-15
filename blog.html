@@ -35,15 +35,7 @@
 <meta name="description" content="Read useful posts, articles, and updates about my life and thoughts. Stay connected!" />
 </head>
 <body>
-<div id="sidebar" class="sidebar">  
-  <a href="index.html">🏠 Home</a>  
-  <a href="about.html">👤 About Me</a>  
-  <a href="blog.html">📝 Blog</a>  
-  <a href="contact.html">📬 Contact</a>  
-  <a href="donate.html">💸 Donate</a>  
-  <a href="gallery.html">🖼️ Gallery</a>  
-  <a href="faq.html">❓ FAQ</a>  
-</div>
+<div id="menu-placeholder"></div>
   <header>
     <h1>📝 My Blog</h1>
     <p>Welcome to my blog section! I share useful posts, thoughts, and more.</p>
@@ -61,5 +53,12 @@
   <footer>
     <p>&copy; 2025 My Blog</p>
   </footer>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </body>
 </html>

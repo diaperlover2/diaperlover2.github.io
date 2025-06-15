@@ -107,19 +107,12 @@
 <meta name="description" content="Contact me through email, Telegram or X. I'm open to feedback, support and conversation." />
 </head>
 <body>
+<div id="menu-placeholder"></div>
   <header>
     <div>Contact Me 💬</div>
     <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
   </header>
-  <div id="sidebar" class="sidebar">  
-  <a href="index.html">🏠 Home</a>  
-  <a href="about.html">👤 About Me</a>  
-  <a href="blog.html">📝 Blog</a>  
-  <a href="contact.html">📬 Contact</a>  
-  <a href="donate.html">💸 Donate</a>  
-  <a href="gallery.html">🖼️ Gallery</a>  
-  <a href="faq.html">❓ FAQ</a>  
-</div>
+  
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
   <main>
@@ -137,5 +130,12 @@
       document.getElementById('overlay').classList.toggle('show');
     }
   </script>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </body>
 </html>

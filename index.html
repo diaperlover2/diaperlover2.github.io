@@ -93,21 +93,13 @@
 <meta name="author" content="Mani Meshkinpoor">
 <meta name="robots" content="index, follow"></head>
 <body>
+<div id="menu-placeholder"></div>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
   <header>
     <div>🌍 Mani Meshkinpoor</div>
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
 
-  <div id="sidebar" class="sidebar">  
-  <a href="index.html">🏠 Home</a>  
-  <a href="about.html">👤 About Me</a>  
-  <a href="blog.html">📝 Blog</a>  
-  <a href="contact.html">📬 Contact</a>  
-  <a href="donate.html">💸 Donate</a>  
-  <a href="gallery.html">🖼️ Gallery</a>  
-  <a href="faq.html">❓ FAQ</a>  
-</div>
 
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
@@ -126,6 +118,7 @@
     }
   </script>
 </body>
+
 <div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999;">
   </div>
 
@@ -161,5 +154,19 @@
     <div class="content">
         <!-- Rest of your website content goes here -->
     </div>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </body>
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
+</script>
 </html>
