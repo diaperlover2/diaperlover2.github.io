@@ -3,10 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Help</title>
-  <meta name="description" content="Support me with a crypto donation.">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+  <title>Donate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffe6e6, #ffe6ff);
+      color: #333;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      color: #c0392b;
+      text-align: center;
+    }
+    .donate-box {
+      background-color: #ffcccc;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .donate-address {
+      font-weight: bold;
+      word-break: break-all;
+      font-size: 1.1em;
+      color: #b30000;
+    }
+    .wallet-link {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background: #d63031;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .wallet-link:hover {
+      background: #c0392b;
+    }
+    .faq-link {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      color: #555;
+      font-size: 0.9em;
+    }
+    .faq-link a {
+      color: #8e44ad;
+      text-decoration: none;
+    }
+    .faq-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
@@ -15,86 +67,30 @@
     gtag('js', new Date());
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-      color: #333;
-      line-height: 1.6;
-      padding: 40px 20px 100px 20px;
-    }
-    h1 {
-      color: #c62828;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .container {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    .donate-box {
-      background-color: #e53935;
-      color: white;
-      padding: 20px;
-      margin-top: 30px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .donate-box p {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-    .donate-box .wallet {
-      font-family: monospace;
-      word-break: break-all;
-      font-size: 14px;
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .donate-box a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 15px;
-      background: white;
-      color: #e53935;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .donate-box a:hover {
-      background: #ffe5e5;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>How to Help</h1>
-    <p>
-      Hello dear visitor, <br>
-      I created this website to share my real story with the world and to seek support from kind-hearted people like you.
-      Every little bit helps me survive, grow, and pursue a better future.
-    </p>
-    <p>
-      If you believe in kindness, fairness, and helping someone in need — this is your chance to make a real difference.
-      You can support me with a crypto donation, which is fast, secure, and direct.
-    </p>
+  <h1>Donate</h1>
 
-    <div class="donate-box">
-      <p>💖 Support Me with a Donation</p>
-      <p><strong>USDT (TRC20) Address:</strong></p>
-      <div class="wallet">TLkjzNUKZPACtQZQou21diMzCGjae1nbeu</div>
-      <a href="https://link.trustwallet.com/send?coin=2000&address=TLkjzNUKZPACtQZQou21diMzCGjae1nbeu" target="_blank">
-        Send with Trust Wallet →
-      </a>
-    </div>
+  <p>Hello dear visitor,</p>
+
+  <p>
+    I created this website to share my personal story with the world and seek support from kind-hearted people like you. Your support means everything — helping me grow, survive, and build a better future.
+  </p>
+
+  <p>
+    If you believe in kindness, fairness, and helping others, this is your chance to make a real difference. A crypto donation is fast, secure, and direct.
+  </p>
+
+  <div class="donate-box">
+    <h2>💖 Support Me with a Donation</h2>
+    <p>USDT (TRC20) Address:</p>
+    <p class="donate-address">TLkjzNUKZPACtQZQou21diMzCGjae1nbeu</p>
+    <a class="wallet-link" href="https://trustwallet.com" target="_blank">Send with Trust Wallet →</a>
+  </div>
+
+  <div class="faq-link">
+    Can't donate financially? There are other ways to help. <br>
+    <a href="faq.html">Learn more in the FAQ →</a>
   </div>
 </body>
 </html>
