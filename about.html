@@ -105,12 +105,14 @@
 <meta name="author" content="Mani Meshkinpoor">
 <meta name="robots" content="index, follow"></head>
 <body>
+
 <div id="menu-placeholder"></div>
   <header>
     <div>About Me 👤</div>
     <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
   </header>
-
+<link rel="stylesheet" href="style.css">
+</head>
 
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
@@ -156,5 +158,6 @@
       document.getElementById('menu-placeholder').innerHTML = data;
     });
 </script>
+<script src="menu.js"></script>
 </body>
 </html>
