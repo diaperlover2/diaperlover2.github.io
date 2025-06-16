@@ -19,13 +19,11 @@
   <meta property="og:description" content="This is the official website of a real person seeking support and freedom. Discover my journey, learn the truth, and join my mission." />
   <meta property="og:url" content="https://diaperlover2.github.io/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://diaperlover2.github.io/images/cover.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mani Meshkinpoor - Real Life Blog" />
   <meta name="twitter:description" content="A personal space to share my life, ask for support, and connect with the world." />
-  <meta name="twitter:image" content="https://diaperlover2.github.io/images/cover.jpg" />
   <meta name="twitter:site" content="@ManiMeshkinpoor" />
 
   <!-- JSON-LD Schema -->
@@ -141,11 +139,14 @@
 
   <!-- JS Scripts -->
   <script>
+    // Toggle sidebar function
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       const overlay = document.getElementById('overlay');
-      sidebar.classList.toggle('open');
-      overlay.classList.toggle('show');
+      if (sidebar && overlay) {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('show');
+      }
     }
 
     // Load sidebar.html content
@@ -153,7 +154,8 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('sidebar').innerHTML = data;
-      });
+      })
+      .catch(error => console.error('Error loading sidebar:', error));
   </script>
 
 </body>

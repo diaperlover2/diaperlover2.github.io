@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Load sidebar.html into menu-placeholder
   fetch('sidebar.html')
     .then(response => response.text())
     .then(html => {
@@ -6,7 +7,19 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .catch(error => console.error('Error loading sidebar:', error));
 
-  function toggleMenu() {
-    document.getElementById('sidebar').classList.toggle('active');
+  // Toggle sidebar function
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    if (sidebar && overlay) {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  }
+
+  // Add click event to menu button if exists
+  const menuBtn = document.querySelector('.menu-btn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', toggleSidebar);
   }
 });
