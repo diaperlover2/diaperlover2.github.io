@@ -2,45 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta property="og:title" content="My Blog" />
-<meta property="og:description" content="Read detailed posts about my journey, life, challenges, and updates. I share everything openly." />
-<meta property="og:url" content="https://diaperlover2.github.io/blog.html" />
-<meta property="og:type" content="article" />
-<meta property="og:image" content="https://diaperlover2.github.io/images/blog.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Blog</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>My Blog - Mani Meshkinpoor</title>
 
-  <!-- 🔍 Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- SEO Meta -->
+  <meta name="description" content="Read useful posts, articles, and updates about my life and thoughts. Stay connected!" />
+  <meta name="keywords" content="Mani Meshkinpoor, blog, life, thoughts, updates, survival, stories" />
+  <meta name="author" content="Mani Meshkinpoor" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Blog" />
+  <meta property="og:description" content="Read detailed posts about my journey, life, challenges, and updates. I share everything openly." />
+  <meta property="og:url" content="https://diaperlover2.github.io/blog.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://diaperlover2.github.io/images/blog.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Blog" />
+  <meta name="twitter:description" content="Follow my blog for honest posts about my journey, thoughts, and struggles." />
+  <meta name="twitter:image" content="https://diaperlover2.github.io/images/blog.jpg" />
+  <meta name="twitter:site" content="@I_am_ABDL_2005" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "My Personal Blog",
-  "url": "https://diaperlover2.github.io",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://diaperlover2.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "My Personal Blog",
+    "url": "https://diaperlover2.github.io",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://diaperlover2.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
-}
-</script>
-<meta name="description" content="Read useful posts, articles, and updates about my life and thoughts. Stay connected!" />
-<link rel="stylesheet" href="style.css">
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="menu-placeholder"></div>
+  <div id="menu-placeholder"></div>
+
   <header>
-    <h1>📝 My Blog</h1>
-    <p>Welcome to my blog section! I share useful posts, thoughts, and more.</p>
+    <div>My Blog 📝</div>
+    <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
   </header>
+
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
   <main>
     <section class="blog-posts">
@@ -52,15 +72,22 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 My Blog</p>
+    <p>&copy; 2025 My Blog - Mani Meshkinpoor</p>
   </footer>
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
-<script src="menu.js"></script>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+  </script>
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+      });
+  </script>
+  <script src="menu.js"></script>
 </body>
 </html>

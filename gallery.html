@@ -2,44 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta property="og:title" content="Gallery" />
-<meta property="og:description" content="A collection of images from my life, proof of my story, and more." />
-<meta property="og:url" content="https://diaperlover2.github.io/gallery.html" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #f0f0f0, #dfe9f3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #333;
-    }
-    a {
-      display: block;
-      margin: 1em;
-      padding: 1em 2em;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-    a:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Life Through My Eyes</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Explore personal and meaningful images from my journey. Each photo holds a story worth seeing." />
+  <meta name="keywords" content="gallery, images, life, proof, media, Mani Meshkinpoor" />
+  <meta name="author" content="Mani Meshkinpoor" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gallery" />
+  <meta property="og:description" content="A collection of images from my life, proof of my story, and more." />
+  <meta property="og:url" content="https://diaperlover2.github.io/gallery.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery" />
+  <meta name="twitter:description" content="A collection of powerful images that reflect my real story and experiences." />
+  <meta name="twitter:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
+  <meta name="twitter:site" content="@I_am_ABDL_2005" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,20 +33,67 @@
     gtag('js', new Date());
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
-<link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f0f0, #dfe9f3);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 40px;
+    }
+    .gallery-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .gallery-links a {
+      padding: 14px 28px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      transition: background 0.3s ease;
+      width: fit-content;
+    }
+    .gallery-links a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (min-width: 600px) {
+      .gallery-links {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-<div id="menu-placeholder"></div>
-  <h1>My Gallery</h1>
-  <a href="my-media.html">📷 My Media</a>
-  <a href="favorite-media.html">🌟 Favorite Media</a>
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
-<script src="menu.js"></script>
+  <div id="menu-placeholder"></div>
+
+  <h1>📸 My Gallery</h1>
+
+  <div class="gallery-links">
+    <a href="my-media.html">📷 My Media</a>
+    <a href="favorite-media.html">🌟 Favorite Media</a>
+  </div>
+
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu-placeholder').innerHTML = data;
+      });
+  </script>
+  <script src="menu.js"></script>
 </body>
 </html>
