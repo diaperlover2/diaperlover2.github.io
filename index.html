@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-<meta property="og:title" content="Welcome to My Official Website" />
-<meta property="og:description" content="This is the official website of a real person seeking support and freedom. Discover my journey, learn the truth, and join my mission." />
-<meta property="og:url" content="https://diaperlover2.github.io/" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://diaperlover2.github.io/images/cover.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mani Meshkinpoor Blog</title>
- <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LQ7JSGT8RN');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "My Personal Blog",
-  "url": "https://diaperlover2.github.io",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://diaperlover2.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="This is the official personal blog of Mani Meshkinpoor, sharing real-life stories, requests for help, and open connection." />
+  <meta name="keywords" content="Mani Meshkinpoor, help me, donation, blog, real life, refugee, support" />
+  <meta name="author" content="Mani Meshkinpoor" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Welcome to My Official Website" />
+  <meta property="og:description" content="This is the official website of a real person seeking support and freedom. Discover my journey, learn the truth, and join my mission." />
+  <meta property="og:url" content="https://diaperlover2.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://diaperlover2.github.io/images/cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mani Meshkinpoor - Real Life Blog" />
+  <meta name="twitter:description" content="A personal space to share my life, ask for support, and connect with the world." />
+  <meta name="twitter:image" content="https://diaperlover2.github.io/images/cover.jpg" />
+  <meta name="twitter:site" content="@ManiMeshkinpoor" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "My Personal Blog",
+    "url": "https://diaperlover2.github.io",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://diaperlover2.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
-}
-</script>
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQ7JSGT8RN');
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -86,90 +110,51 @@
     .overlay.show {
       display: block;
     }
+    main {
+      padding: 20px;
+    }
   </style>
-<!-- Meta SEO Tags -->
-<meta name="description" content="This is the official personal blog of Mani Meshkinpoor, sharing real-life stories, requests for help, and open connection.">
-<meta name="keywords" content="Mani Meshkinpoor, help me, donation, blog, real life, refugee, support">
-<meta name="author" content="Mani Meshkinpoor">
-<meta name="robots" content="index, follow"></head>
+</head>
 <body>
-<div id="menu-placeholder"></div>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Sidebar Loader -->
+  <div id="menu-placeholder"></div>
+
+  <!-- Header -->
   <header>
     <div>🌍 Mani Meshkinpoor</div>
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
 
-
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar"></div>
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-  <main style="padding: 20px;">
-  <h1>Welcome to my blog 💖</h1>
-  <p>Here you can read my life story, connect with me, and support me if you'd like 🙏</p>
-  <p>👉 Use the menu above to explore the pages.</p>
-  <p>🛠 This website is constantly being updated.  
-     If you encounter any issues, please contact me using the links on the <a href="contact.html" style="color: #007bff;">Contact Me</a> page and let me know. Thank you! 💌</p>
-</main>
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to my blog 💖</h1>
+    <p>Here you can read my life story, connect with me, and support me if you'd like 🙏</p>
+    <p>👉 Use the menu above to explore the pages.</p>
+    <p>🛠 This website is constantly being updated.
+      If you encounter any issues, please contact me using the links on the <a href="contact.html" style="color: #007bff;">Contact Me</a> page. Thank you! 💌</p>
+  </main>
 
+  <!-- JS Scripts -->
   <script>
     function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-      document.getElementById('overlay').classList.toggle('show');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('show');
     }
+
+    // Load sidebar.html content
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
   </script>
-<link rel="stylesheet" href="style.css">
-</head>
-<script src="menu.js"></script>
-</body>
-<div id="menu-placeholder"></div>
-<div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 999;">
-  </div>
 
-<div style="margin-top: 600px;"></div>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <style>
-        .banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000; /* Ensures the image stays on top of other elements */
-        }
-        .banner img {
-            width: 100%;
-            height: auto; /* Maintains image aspect ratio */
-            object-fit: cover; /* Keeps the image clear and fills the space */
-        }
-        .content {
-            margin-top: 600px; /* Pushes content below the banner */
-        }
-    </style>
-<link rel="stylesheet" href="style.css">
-    <div class="banner">
-    
-    <div class="content">
-        <!-- Rest of your website content goes here -->
-    </div>
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
 </body>
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
 </html>

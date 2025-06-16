@@ -2,34 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-<meta property="og:title" content="About Me" />
-<meta property="og:description" content="Learn more about my life, struggles, and reasons for building this website and campaign." />
-<meta property="og:url" content="https://diaperlover2.github.io/about.html" />
-<meta property="og:type" content="profile" />
-<meta property="og:image" content="https://diaperlover2.github.io/images/about-cover.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Mani Meshkinpoor</title>
- <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LQ7JSGT8RN');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "My Personal Blog",
-  "url": "https://diaperlover2.github.io",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://diaperlover2.github.io/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Meta SEO -->
+  <meta name="description" content="This is the official personal blog of Mani Meshkinpoor, sharing real-life stories, requests for help, and open connection.">
+  <meta name="keywords" content="Mani Meshkinpoor, help me, donation, blog, real life, refugee, support">
+  <meta name="author" content="Mani Meshkinpoor">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Me" />
+  <meta property="og:description" content="Learn more about my life, struggles, and reasons for building this website and campaign." />
+  <meta property="og:url" content="https://diaperlover2.github.io/about.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://diaperlover2.github.io/images/about-cover.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Me - Mani Meshkinpoor" />
+  <meta name="twitter:description" content="Learn more about my life, struggles, and reasons for building this website and campaign." />
+  <meta name="twitter:image" content="https://diaperlover2.github.io/images/about-cover.jpg" />
+  <meta name="twitter:site" content="@I_am_ABDL_2005" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mani Meshkinpoor",
+    "url": "https://diaperlover2.github.io/about.html",
+    "image": "https://diaperlover2.github.io/images/about-cover.jpg",
+    "description": "Refugee from Iran seeking help and support. Learn more about my struggles and why I built this campaign.",
+    "sameAs": [
+      "https://x.com/I_am_ABDL_2005",
+      "https://t.me/Survival_Talisman_admin"
+    ]
   }
-}
-</script>
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LQ7JSGT8RN');
+  </script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
@@ -99,27 +124,23 @@
       font-weight: bold;
     }
   </style>
-<!-- Meta SEO Tags -->
-<meta name="description" content="This is the official personal blog of Mani Meshkinpoor, sharing real-life stories, requests for help, and open connection.">
-<meta name="keywords" content="Mani Meshkinpoor, help me, donation, blog, real life, refugee, support">
-<meta name="author" content="Mani Meshkinpoor">
-<meta name="robots" content="index, follow"></head>
+</head>
 <body>
 
-<div id="menu-placeholder"></div>
+  <div id="menu-placeholder"></div>
+
   <header>
     <div>About Me 👤</div>
-    <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
-<link rel="stylesheet" href="style.css">
-</head>
 
+  <div id="sidebar" class="sidebar"></div>
   <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
   <main>
     <h1>Hello, I'm Mani Meshkinpoor 🌍</h1>
     <p>
-     I'm an ABDL boy and I'm from Iran. Aside from my country's struggles, I live under a strict and abusive family. My real name is hidden for safety reasons.
+      I'm an ABDL boy and I'm from Iran. Aside from my country's struggles, I live under a strict and abusive family. My real name is hidden for safety reasons.
     </p>
     <p>
       I’ve suffered mostly emotional abuse — forbidden from education or working. I'm 20 now, and people over 18 in Iran rarely receive help.
@@ -150,14 +171,13 @@
       document.getElementById('sidebar').classList.toggle('open');
       document.getElementById('overlay').classList.toggle('show');
     }
+
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+      });
   </script>
-<script>
-  fetch('sidebar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
-<script src="menu.js"></script>
+
 </body>
 </html>

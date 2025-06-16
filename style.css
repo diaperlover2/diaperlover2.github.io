@@ -1,39 +1,66 @@
+/* Sidebar & overlay styles */
 .sidebar {
-  background: linear-gradient(to bottom, #1f1f1f, #333);
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
   padding: 20px;
-  border-radius: 12px;
-  max-width: 280px;
-  margin: 20px auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  border-left: 2px solid #00bcd4;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
-.sidebar a {
+.sidebar.open {
+  right: 0;
+}
+
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.menu-items a {
   display: block;
-  padding: 12px 20px;
+  padding: 12px;
   margin: 10px 0;
-  color: #ffffff;
   background-color: #444;
+  color: #fff;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.sidebar a:hover {
+.menu-items a:hover {
   background-color: #00bcd4;
   color: #000;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
-  .sidebar {
-    width: 90%;
-    padding: 15px;
-  }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
 
-  .sidebar a {
-    font-size: 16px;
-    padding: 10px 16px;
+.overlay.show {
+  display: block;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80%;
   }
 }
