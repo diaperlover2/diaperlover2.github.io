@@ -32,63 +32,87 @@
 
   <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      background: linear-gradient(to right, #f0f0f0, #dfe9f3);
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .menu-btn {
-      font-size: 24px;
-      cursor: pointer;
-    }
-    main {
-      text-align: center;
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #333;
-      margin-bottom: 40px;
-    }
-    .gallery-links {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-    .gallery-links a {
-      padding: 14px 28px;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 1.1em;
-      transition: background 0.3s ease;
-      width: fit-content;
-    }
-    .gallery-links a:hover {
-      background-color: #0056b3;
-    }
-    @media (min-width: 600px) {
-      .gallery-links {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
+    /* Hamburger Menu Styles */
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
+  padding: 20px;
+  border-left: 2px solid #00bcd4;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Menu Links */
+.menu-items a {
+  display: block;
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+}
+
+.menu-items a:hover {
+  color: #00bcd4;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
   </style>
 </head>
 <body>
-
-  <div id="menu-placeholder"></div>
-
+<!-- Hamburger Menu Sidebar -->
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+<div id="sidebar" class="sidebar">
+  <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
+  <div class="menu-items">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About Me</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="contact.html">📬 Contact</a>
+    <a href="donate.html">💸 Donate</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="faq.html">❓ FAQ</a>
+  </div>
+</div>
   <header>
     <div>Gallery 🖼️</div>
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
@@ -117,6 +141,11 @@
         };
       });
   </script>
-
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('show');
+  }
+</script>
 </body>
 </html>

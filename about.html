@@ -56,45 +56,87 @@
   <!-- Style -->
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f5f5f5;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .menu-btn {
-      cursor: pointer;
-      font-size: 24px;
-    }
-    main {
-      padding: 20px;
-    }
-    .donate-box {
-      margin-top: 20px;
-      padding: 15px;
-      background: #fff0f0;
-      border: 1px solid #ffaaaa;
-      border-radius: 10px;
-    }
-    .donate-box a {
-      color: #d00;
-      font-weight: bold;
-    }
+    /* Hamburger Menu Styles */
+.menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.95);
+  color: white;
+  padding: 20px;
+  border-left: 2px solid #00bcd4;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  transition: right 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Menu Links */
+.menu-items a {
+  display: block;
+  padding: 12px 0;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+}
+
+.menu-items a:hover {
+  color: #00bcd4;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
   </style>
 </head>
 <body>
-
-  <!-- Sidebar Placeholder -->
-  <div id="menu-placeholder"></div>
-
-  <!-- Header -->
+<!-- Hamburger Menu Sidebar -->
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+<div id="sidebar" class="sidebar">
+  <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
+  <div class="menu-items">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About Me</a>
+    <a href="blog.html">📝 Blog</a>
+    <a href="contact.html">📬 Contact</a>
+    <a href="donate.html">💸 Donate</a>
+    <a href="gallery.html">🖼️ Gallery</a>
+    <a href="faq.html">❓ FAQ</a>
+  </div>
+</div>
   <header>
     <div>About Me 👤</div>
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
@@ -149,6 +191,11 @@
       })
       .catch(error => console.error('Error loading sidebar:', error));
   </script>
-
+<script>
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('show');
+  }
+</script>
 </body>
 </html>
