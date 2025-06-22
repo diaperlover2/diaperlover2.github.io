@@ -73,42 +73,6 @@
       cursor: pointer;
       font-size: 24px;
     }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100%;
-      background-color: #222;
-      color: white;
-      transition: right 0.3s ease-in-out;
-      padding-top: 60px;
-    }
-    .sidebar a {
-      display: block;
-      padding: 15px 20px;
-      text-decoration: none;
-      color: white;
-      border-bottom: 1px solid #444;
-    }
-    .sidebar a:hover {
-      background: #444;
-    }
-    .sidebar.open {
-      right: 0;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-    }
-    .overlay.show {
-      display: block;
-    }
     main {
       padding: 20px;
     }
@@ -127,16 +91,16 @@
 </head>
 <body>
 
+  <!-- Sidebar Placeholder -->
   <div id="menu-placeholder"></div>
 
+  <!-- Header -->
   <header>
     <div>About Me 👤</div>
     <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
 
-  <div id="sidebar" class="sidebar"></div>
-  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
-
+  <!-- Main Content -->
   <main>
     <h1>Hello, I'm Mani Meshkinpoor 🌍</h1>
     <p>
@@ -166,17 +130,24 @@
     </p>
   </main>
 
+  <!-- Sidebar Loader and Toggle Script -->
   <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-      document.getElementById('overlay').classList.toggle('show');
-    }
-
     fetch('sidebar.html')
       .then(response => response.text())
       .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
+        document.getElementById('menu-placeholder').innerHTML = data;
+
+        // Define toggleSidebar after sidebar is loaded
+        window.toggleSidebar = function () {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (sidebar && overlay) {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+          }
+        };
+      })
+      .catch(error => console.error('Error loading sidebar:', error));
   </script>
 
 </body>

@@ -50,17 +50,48 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu-btn {
+      cursor: pointer;
+      font-size: 24px;
+    }
+    main {
+      padding: 20px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Sidebar Placeholder -->
   <div id="menu-placeholder"></div>
 
+  <!-- Header -->
   <header>
     <div>Contact Me 💬</div>
-    <div class="menu-btn" onclick="toggleSidebar()">&#9776;</div>
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
 
-  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
-
+  <!-- Main -->
   <main>
     <h1>Let's Talk!</h1>
     <div class="contact-info">
@@ -70,18 +101,25 @@
     </div>
   </main>
 
+  <!-- Sidebar Loader + Toggle -->
   <script>
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-      document.getElementById('overlay').classList.toggle('show');
-    }
-
     fetch('sidebar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('menu-placeholder').innerHTML = data;
-      });
+
+        // Define toggleSidebar after sidebar is loaded
+        window.toggleSidebar = function () {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (sidebar && overlay) {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+          }
+        };
+      })
+      .catch(error => console.error('Error loading sidebar:', error));
   </script>
-  <script src="menu.js"></script>
+
 </body>
 </html>

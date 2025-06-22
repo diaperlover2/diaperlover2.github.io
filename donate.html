@@ -5,36 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support My Campaign - Donate</title>
 
-  <!-- SEO Meta -->
   <meta name="description" content="Help me escape abuse and build a new life. Every contribution matters. Learn how to donate securely." />
   <meta name="keywords" content="donate, support, help, USDT, crypto donation, TRC20, Mani Meshkinpoor" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Support My Campaign" />
   <meta property="og:description" content="Help me escape abuse and build a new life. Every contribution matters. Learn how to donate securely." />
   <meta property="og:url" content="https://diaperlover2.github.io/donate.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://diaperlover2.github.io/images/donate.jpg" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Support My Campaign" />
   <meta name="twitter:description" content="Help me escape abuse and build a new life. Your support matters." />
   <meta name="twitter:image" content="https://diaperlover2.github.io/images/donate.jpg" />
   <meta name="twitter:site" content="@I_am_ABDL_2005" />
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
-  <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,9 +47,23 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
+      margin: 0;
       background: linear-gradient(to bottom right, #ffe6e6, #ffe6ff);
-      color: #333;
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    main {
       padding: 20px;
       max-width: 700px;
       margin: auto;
@@ -67,9 +76,9 @@
       background-color: #ffcccc;
       border-radius: 12px;
       padding: 20px;
-      margin-top: 30px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
     .donate-address {
       font-weight: bold;
@@ -82,21 +91,17 @@
       background-color: #4CAF50;
       color: white;
       padding: 12px 20px;
-      text-align: center;
       text-decoration: none;
       font-size: 16px;
       border-radius: 10px;
       margin-top: 10px;
-      transition: 0.3s ease;
     }
     .donate-button:hover {
       background-color: #45a049;
     }
     .faq-link {
-      display: block;
       margin-top: 30px;
       text-align: center;
-      color: #555;
       font-size: 0.9em;
     }
     .faq-link a {
@@ -109,41 +114,48 @@
   </style>
 </head>
 <body>
+
   <div id="menu-placeholder"></div>
 
-  <h1>Donate</h1>
+  <header>
+    <div>Donate 💖</div>
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  </header>
 
-  <p>Hello dear visitor,</p>
+  <main>
+    <h1>Donate</h1>
+    <p>Hello dear visitor,</p>
+    <p>I created this website to share my personal story with the world and seek support from kind-hearted people like you. Your support means everything — helping me grow, survive, and build a better future.</p>
+    <p>If you believe in kindness, fairness, and helping others, this is your chance to make a real difference. A crypto donation is fast, secure, and direct.</p>
 
-  <p>
-    I created this website to share my personal story with the world and seek support from kind-hearted people like you. Your support means everything — helping me grow, survive, and build a better future.
-  </p>
+    <div class="donate-box">
+      <h2>💖 Support Me with a Donation</h2>
+      <p>USDT (TRC20) Address:</p>
+      <p class="donate-address">TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</p>
+      <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank" class="donate-button">💖 Send Donation via Trust Wallet →</a>
+    </div>
 
-  <p>
-    If you believe in kindness, fairness, and helping others, this is your chance to make a real difference. A crypto donation is fast, secure, and direct.
-  </p>
-
-  <div class="donate-box">
-    <h2>💖 Support Me with a Donation</h2>
-    <p>USDT (TRC20) Address:</p>
-    <p class="donate-address">TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</p>
-    <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank" class="donate-button">
-      💖 Send Donation via Trust Wallet →
-    </a>
-  </div>
-
-  <div class="faq-link">
-    Can't donate financially? There are other ways to help. <br>
-    <a href="faq.html">Learn more in the FAQ →</a>
-  </div>
+    <div class="faq-link">
+      Can't donate financially? There are other ways to help.<br>
+      <a href="faq.html">Learn more in the FAQ →</a>
+    </div>
+  </main>
 
   <script>
     fetch('sidebar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('menu-placeholder').innerHTML = data;
+        window.toggleSidebar = function () {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (sidebar && overlay) {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+          }
+        };
       });
   </script>
-  <script src="menu.js"></script>
+
 </body>
 </html>

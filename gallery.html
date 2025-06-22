@@ -5,27 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Life Through My Eyes</title>
 
-  <!-- SEO Meta -->
   <meta name="description" content="Explore personal and meaningful images from my journey. Each photo holds a story worth seeing." />
   <meta name="keywords" content="gallery, images, life, proof, media, Mani Meshkinpoor" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Gallery" />
   <meta property="og:description" content="A collection of images from my life, proof of my story, and more." />
   <meta property="og:url" content="https://diaperlover2.github.io/gallery.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gallery" />
   <meta name="twitter:description" content="A collection of powerful images that reflect my real story and experiences." />
   <meta name="twitter:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
   <meta name="twitter:site" content="@I_am_ABDL_2005" />
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,8 +35,21 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 0;
       background: linear-gradient(to right, #f0f0f0, #dfe9f3);
+    }
+    header {
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+    }
+    main {
       text-align: center;
       padding: 40px 20px;
     }
@@ -68,7 +77,6 @@
     .gallery-links a:hover {
       background-color: #0056b3;
     }
-
     @media (min-width: 600px) {
       .gallery-links {
         flex-direction: row;
@@ -78,22 +86,37 @@
   </style>
 </head>
 <body>
+
   <div id="menu-placeholder"></div>
 
-  <h1>📸 My Gallery</h1>
+  <header>
+    <div>Gallery 🖼️</div>
+    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  </header>
 
-  <div class="gallery-links">
-    <a href="my-media.html">📷 My Media</a>
-    <a href="favorite-media.html">🌟 Favorite Media</a>
-  </div>
+  <main>
+    <h1>📸 My Gallery</h1>
+    <div class="gallery-links">
+      <a href="my-media.html">📷 My Media</a>
+      <a href="favorite-media.html">🌟 Favorite Media</a>
+    </div>
+  </main>
 
   <script>
     fetch('sidebar.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('menu-placeholder').innerHTML = data;
+        window.toggleSidebar = function () {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (sidebar && overlay) {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+          }
+        };
       });
   </script>
-  <script src="menu.js"></script>
+
 </body>
 </html>

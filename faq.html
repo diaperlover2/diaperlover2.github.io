@@ -79,6 +79,8 @@
 </head>
 <body>
   <div id="menu-placeholder"></div>
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
   <div class="container">
     <h1>Frequently Asked Questions (FAQ)</h1>
 
@@ -102,13 +104,23 @@
     <p class="footer-note">This page will be updated regularly. Please check back often for new questions and answers.</p>
   </div>
 
-  <script src="menu.js"></script>
   <script>
     fetch('sidebar.html')
       .then(res => res.text())
       .then(data => {
         document.getElementById('menu-placeholder').innerHTML = data;
+
+        // تعریف تابع toggleSidebar بعد از لود منو
+        window.toggleSidebar = function () {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (sidebar && overlay) {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+          }
+        };
       });
   </script>
+  <script src="menu.js"></script>
 </body>
 </html>
