@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me - Mani Meshkinpoor</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <!-- Meta SEO -->
@@ -53,149 +52,123 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Hamburger Menu Styles */
-.menu-btn {
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-}
+  <!-- Styles -->
+<style>
+  .menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+  }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100%;
-  background: rgba(30, 30, 30, 0.95);
-  color: white;
-  padding: 20px;
-  border-left: 2px solid #00bcd4;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-  transition: right 0.3s ease;
-  backdrop-filter: blur(8px);
-}
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 260px;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.98);
+    color: white;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    backdrop-filter: blur(6px);
+    border-left: 2px solid #00bcd4;
+  }
 
-.sidebar.open {
-  right: 0;
-}
+  .sidebar.open {
+    right: 0;
+  }
 
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
-  margin-bottom: 20px;
-}
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+  }
 
-/* Menu Links */
-.menu-items a {
-  display: block;
-  padding: 12px 0;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 16px;
-}
+  .overlay.show {
+    display: block;
+  }
 
-.menu-items a:hover {
-  color: #00bcd4;
-}
+  .menu-toggle {
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
 
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 1000;
-}
+  .menu-items button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
 
-.overlay.show {
-  display: block;
-}
-  </style>
+  .menu-items button:hover {
+    background: #0197a3;
+  }
+</style>
 </head>
 <body>
-<!-- Hamburger Menu Sidebar -->
+
+<!-- Hamburger Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About Me</a>
-    <a href="blog.html">📝 Blog</a>
-    <a href="contact.html">📬 Contact</a>
-    <a href="donate.html">💸 Donate</a>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="faq.html">❓ FAQ</a>
+    <button onclick="location.href='index.html'">🏠 Home</button>
+    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='blog.html'">📝 Blog</button>
+    <button onclick="location.href='contact.html'">📬 Contact</button>
+    <button onclick="location.href='donate.html'">💸 Donate</button>
+    <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
+    <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
-</div>
-  <header>
-    <div>About Me 👤</div>
-    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Hello, I'm Mani Meshkinpoor 🌍</h1>
-    <p>
-      I'm an ABDL boy and I'm from Iran. Aside from my country's struggles, I live under a strict and abusive family. My real name is hidden for safety reasons.
-    </p>
-    <p>
-      I’ve suffered mostly emotional abuse — forbidden from education or working. I'm 20 now, and people over 18 in Iran rarely receive help.
-    </p>
-    <p>
-      I urgently need financial support to escape this life and seek asylum. I tried once by going to Turkey, but I couldn’t stay because I ran out of money.
-    </p>
-    <p>
-      I don’t even own a computer. I created this blog only with my phone using Termux and ChatGPT (free version)! 💪📱
-    </p>
-    <div class="donate-box">
-      💖 <strong>If you wish to help me survive:</strong><br>
-      My USDT TRC20 Wallet: <code>TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</code><br>
-      <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank">Click to Donate via Trust Wallet</a>
-    </div>
-    <p>
-      Even $1 means the world to me. If you can’t help, please don’t report this page — I worked so hard to build it 🙏
-    </p>
-    <p>
-      📌 You can contact me here:<br>
-      Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank">@Survival_Talisman_admin</a><br>
-      X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank">@I_am_ABDL_2005</a>
-    </p>
-  </main>
+<!-- Header -->
+<header>
+  <div>🌍 Mani Meshkinpoor</div>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+</header>
+<!-- Main -->
+<main>
+  <h1>Hello, I'm Mani Meshkinpoor 🌍</h1>
+  <p>I'm an ABDL boy and I'm from Iran. Aside from my country's struggles, I live under a strict and abusive family. My real name is hidden for safety reasons.</p>
+  <p>I’ve suffered mostly emotional abuse — forbidden from education or working. I'm 20 now, and people over 18 in Iran rarely receive help.</p>
+  <p>I urgently need financial support to escape this life and seek asylum. I tried once by going to Turkey, but I couldn’t stay because I ran out of money.</p>
+  <p>I don’t even own a computer. I created this blog only with my phone using Termux and ChatGPT (free version)! 💪📱</p>
+  <div class="donate-box">
+    💖 <strong>If you wish to help me survive:</strong><br>
+    My USDT TRC20 Wallet: <code>TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</code><br>
+    <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank">Click to Donate via Trust Wallet</a>
+  </div>
+  <p>Even $1 means the world to me. If you can’t help, please don’t report this page — I worked so hard to build it 🙏</p>
+  <p>
+    📌 You can contact me here:<br>
+    Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank">@Survival_Talisman_admin</a><br>
+    X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank">@I_am_ABDL_2005</a>
+  </p>
+</main>
 
-  <!-- Sidebar Loader and Toggle Script -->
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-
-        // Define toggleSidebar after sidebar is loaded
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      })
-      .catch(error => console.error('Error loading sidebar:', error));
-  </script>
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');
     document.getElementById('overlay').classList.toggle('show');
   }
 </script>
+
 </body>
 </html>

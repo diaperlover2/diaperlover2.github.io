@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mani Meshkinpoor Blog</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
   <!-- SEO Meta Tags -->
@@ -26,21 +25,6 @@
   <meta name="twitter:description" content="A personal space to share my life, ask for support, and connect with the world." />
   <meta name="twitter:site" content="@ManiMeshkinpoor" />
 
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "My Personal Blog",
-    "url": "https://diaperlover2.github.io",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://diaperlover2.github.io/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
@@ -50,93 +34,96 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Hamburger Menu Styles */
-.menu-btn {
-  font-size: 24px;
-  cursor: pointer;
-  user-select: none;
-}
+ <style>
+  .menu-btn {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+  }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100%;
-  background: rgba(30, 30, 30, 0.95);
-  color: white;
-  padding: 20px;
-  border-left: 2px solid #00bcd4;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1001;
-  transition: right 0.3s ease;
-  backdrop-filter: blur(8px);
-}
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 260px;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.98);
+    color: white;
+    padding: 20px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    backdrop-filter: blur(6px);
+    border-left: 2px solid #00bcd4;
+  }
 
-.sidebar.open {
-  right: 0;
-}
+  .sidebar.open {
+    right: 0;
+  }
 
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  text-align: right;
-  margin-bottom: 20px;
-}
+  .overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+  }
 
-/* Menu Links */
-.menu-items a {
-  display: block;
-  padding: 12px 0;
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 16px;
-}
+  .overlay.show {
+    display: block;
+  }
 
-.menu-items a:hover {
-  color: #00bcd4;
-}
+  .menu-toggle {
+    font-size: 24px;
+    text-align: right;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
 
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 1000;
-}
+  .menu-items button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
 
-.overlay.show {
-  display: block;
-}
- </style>
+  .menu-items button:hover {
+    background: #0197a3;
+  }
+  </style>
 </head>
 <body>
-<!-- Hamburger Menu Sidebar -->
+<!-- Hamburger Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About Me</a>
-    <a href="blog.html">📝 Blog</a>
-    <a href="contact.html">📬 Contact</a>
-    <a href="donate.html">💸 Donate</a>
-    <a href="gallery.html">🖼️ Gallery</a>
-    <a href="faq.html">❓ FAQ</a>
+    <button onclick="location.href='index.html'">🏠 Home</button>
+    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='blog.html'">📝 Blog</button>
+    <button onclick="location.href='contact.html'">📬 Contact</button>
+    <button onclick="location.href='donate.html'">💸 Donate</button>
+    <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
+    <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
-</div>  
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <!-- Header -->
   <header>
-    <div>🌍 Mani Meshkinpoor</div>
-    <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+  <div>🌍 Mani Meshkinpoor</div>
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
   </header>
 
   <!-- Main Content -->
@@ -145,29 +132,9 @@
     <p>Here you can read my life story, connect with me, and support me if you'd like 🙏</p>
     <p>👉 Use the menu above to explore the pages.</p>
     <p>🛠 This website is constantly being updated.
-      If you encounter any issues, please contact me using the links on the <a href="contact.html" style="color: #007bff;">Contact Me</a> page. Thank you! 💌</p>
+      If you encounter any issues, please contact me using the links on the <a href="contact.html">Contact Me</a> page. Thank you! 💌</p>
   </main>
 
-  <!-- JS Scripts -->
-  <script>
-    // Load sidebar.html content dynamically
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-
-        // Define toggleSidebar after loading sidebar
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      })
-      .catch(error => console.error('Error loading sidebar:', error));
-  </script>
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');
