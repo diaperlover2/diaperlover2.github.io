@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support My Campaign - Donate</title>
-<!-- meta tags -->
+
+  <!-- Meta Tags -->
   <meta name="description" content="Help me escape abuse and build a new life. Every contribution matters. Learn how to donate securely." />
   <meta name="keywords" content="donate, support, help, USDT, crypto donation, TRC20, Mani Meshkinpoor" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Support My Campaign" />
   <meta property="og:description" content="Help me escape abuse and build a new life. Every contribution matters. Learn how to donate securely." />
   <meta property="og:url" content="https://diaperlover2.github.io/donate.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://diaperlover2.github.io/images/donate.jpg" />
-<!-- twitter card -->
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Support My Campaign" />
   <meta name="twitter:description" content="Help me escape abuse and build a new life. Your support matters." />
   <meta name="twitter:image" content="https://diaperlover2.github.io/images/donate.jpg" />
   <meta name="twitter:site" content="@I_am_ABDL_2005" />
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,6 +34,7 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,131 +49,167 @@
   }
   </script>
 
-<!-- styles -->
-<style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <!-- Styles -->
+  <style>
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
-</style>
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+
+    .donate-box {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .donate-address {
+      font-family: monospace;
+      background: #e0f7fa;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 10px 0;
+      word-break: break-all;
+    }
+
+    .donate-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00bcd4;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .donate-button:hover {
+      background: #0197a3;
+    }
+
+    .faq-link {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .faq-link a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .faq-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
 <!-- Hamburger Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <button onclick="location.href='index.html'">🏠 Home</button>
-    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='index.html'"> 🏠 Home</button>
+    <button onclick="location.href='about.html'"> 👤 About Me</button>
     <button onclick="location.href='blog.html'">📝 Blog</button>
     <button onclick="location.href='contact.html'">📬 Contact</button>
     <button onclick="location.href='donate.html'">💸 Donate</button>
     <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
     <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
+</div>
 
+<!-- Header -->
 <header>
   <div>🌍 Mani Meshkinpoor</div>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 </header>
 
-  <main>
-    <h1>Donate</h1>
-    <p>Hello dear visitor,</p>
-    <p>I created this website to share my personal story with the world and seek support from kind-hearted people like you. Your support means everything — helping me grow, survive, and build a better future.</p>
-    <p>If you believe in kindness, fairness, and helping others, this is your chance to make a real difference. A crypto donation is fast, secure, and direct.</p>
+<!-- Main Content -->
+<main>
+  <h1>Donate</h1>
+  <p>Hello dear visitor,</p>
+  <p>I created this website to share my personal story with the world and seek support from kind-hearted people like you. Your support means everything — helping me grow, survive, and build a better future.</p>
+  <p>If you believe in kindness, fairness, and helping others, this is your chance to make a real difference. A crypto donation is fast, secure, and direct.</p>
 
-    <div class="donate-box">
-      <h2>💖 Support Me with a Donation</h2>
-      <p>USDT (TRC20) Address:</p>
-      <p class="donate-address">TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</p>
-      <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank" class="donate-button">💖 Send Donation via Trust Wallet →</a>
-    </div>
+  <div class="donate-box">
+    <h2>💖 Support Me with a Donation</h2>
+    <p>USDT (TRC20) Address:</p>
+    <p class="donate-address">TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu</p>
+    <a href="https://link.trustwallet.com/send?coin=195&address=TLkjzNuKZPAcTQZouQ21diMzcGjae1nbeu&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank" class="donate-button">💖 Send Donation via Trust Wallet →</a>
+  </div>
 
-    <div class="faq-link">
-      Can't donate financially? There are other ways to help.<br>
-      <a href="faq.html">Learn more in the FAQ →</a>
-    </div>
-  </main>
+  <div class="faq-link">
+    Can't donate financially? There are other ways to help.<br>
+    <a href="faq.html">Learn more in the FAQ →</a>
+  </div>
+</main>
 
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      });
-  </script>
-
+<!-- Sidebar Toggle Script -->
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');

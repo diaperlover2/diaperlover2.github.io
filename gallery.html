@@ -4,24 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Life Through My Eyes</title>
-<!-- SEO -->
+
+  <!-- SEO -->
   <meta name="description" content="Explore personal and meaningful images from my journey. Each photo holds a story worth seeing." />
-  <meta name="keywords" content="gallery, images, life, proof, media, Mani Meshkinpoor" />
+  <meta name="keywords" content="gallery, images, real proof, media, Mani Meshkinpoor" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
-<!-- meta -->
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Gallery" />
   <meta property="og:description" content="A collection of images from my life, proof of my story, and more." />
   <meta property="og:url" content="https://diaperlover2.github.io/gallery.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
-<!-- twitter card -->
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gallery" />
   <meta name="twitter:description" content="A collection of powerful images that reflect my real story and experiences." />
   <meta name="twitter:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
   <meta name="twitter:site" content="@I_am_ABDL_2005" />
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,75 +34,109 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
-<!-- styles -->
-<style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <!-- Styles -->
+  <style>
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
-</style>
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+
+    main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .gallery-links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .gallery-links a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #00bcd4;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      width: 250px;
+    }
+
+    .gallery-links a:hover {
+      background-color: #0197a3;
+    }
+  </style>
 </head>
 <body>
 <!-- Hamburger Sidebar Menu -->
@@ -106,8 +144,8 @@
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <button onclick="location.href='index.html'">🏠 Home</button>
-    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='index.html'"> 🏠 Home</button>
+    <button onclick="location.href='about.html'"> 👤 About Me</button>
     <button onclick="location.href='blog.html'">📝 Blog</button>
     <button onclick="location.href='contact.html'">📬 Contact</button>
     <button onclick="location.href='donate.html'">💸 Donate</button>
@@ -120,29 +158,31 @@
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 </header>
 
-  <main>
-    <h1>📸 My Gallery</h1>
-    <div class="gallery-links">
-      <a href="my-media.html">📷 My Media</a>
-      <a href="favorite-media.html">🌟 Favorite Media</a>
-    </div>
-  </main>
+<main>
+  <h1>📸 Gallery of My Life</h1>
+  <p>Every photo is a memory, a piece of truth, and a part of who I am.</p>
 
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      });
-  </script>
+  <div class="gallery-links">
+    <a href="my-real-media.html">📂 My Real Media</a>
+    <a href="my-favorite-media.html">🌟 My Favorite Media</a>
+  </div>
+</main>
+
+<script>
+  fetch('sidebar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+      window.toggleSidebar = function () {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (sidebar && overlay) {
+          sidebar.classList.toggle('open');
+          overlay.classList.toggle('show');
+        }
+      };
+    });
+</script>
 
 <script>
   function toggleSidebar() {

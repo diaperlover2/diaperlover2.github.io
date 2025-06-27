@@ -50,130 +50,114 @@
   </script>
 
   <!-- styles -->
-<style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <style>
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
-</style>
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+  </style>
 </head>
 <body>
+
 <!-- Hamburger Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <button onclick="location.href='index.html'">🏠 Home</button>
-    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='index.html'"> 🏠 Home</button>
+    <button onclick="location.href='about.html'"> 👤 About Me</button>
     <button onclick="location.href='blog.html'">📝 Blog</button>
     <button onclick="location.href='contact.html'">📬 Contact</button>
     <button onclick="location.href='donate.html'">💸 Donate</button>
     <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
     <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
-  
+</div>
+
+<!-- Header -->
 <header>
   <div>🌍 Mani Meshkinpoor</div>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="blog-posts">
-      <article>
-        <h2>Coming Soon</h2>
-        <p>I will publish useful articles and updates here regularly. Stay tuned!</p>
-      </article>
-    </section>
-  </main>
+<!-- Main Content -->
+<main>
+  <section class="blog-posts">
+    <article>
+      <h2>Coming Soon</h2>
+      <p>I will publish useful articles and updates here regularly. Stay tuned!</p>
+    </article>
+  </section>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Blog - Mani Meshkinpoor</p>
-  </footer>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 My Blog - Mani Meshkinpoor</p>
+</footer>
 
-  <!-- Sidebar Script -->
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-
-        // Define toggleSidebar after sidebar loads
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      })
-      .catch(error => console.error('Error loading sidebar:', error));
-  </script>
-
+<!-- Sidebar Toggle Script -->
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');

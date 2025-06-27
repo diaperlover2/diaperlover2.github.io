@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ - Support & Asylum Information</title>
 
+  <!-- Meta -->
   <meta name="description" content="Frequently asked questions about my story, asylum request, and how to support my freedom. Honest answers, real struggles." />
   <meta name="keywords" content="asylum, faq, personal story, support, help, donations, Iran, abuse" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://diaperlover2.github.io/faq.html" />
   <meta property="og:title" content="FAQ - Support & Asylum Information" />
   <meta property="og:description" content="Answers to real questions about my asylum journey, past trauma, and how to support me." />
   <meta property="og:image" content="https://diaperlover2.github.io/images/gallery.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FAQ - Support & Asylum Information" />
   <meta name="twitter:description" content="Answers to real questions about my asylum journey, past trauma, and how to support me." />
@@ -33,136 +30,162 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
-<!-- styles -->
-<style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f5f8fa;
+      color: #222;
+      padding: 0 20px;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    header {
+      background: #00bcd4;
+      color: white;
+      padding: 15px 20px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 1002;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
-</style>
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #00bcd4;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 30px;
+    }
+
+    .footer-note {
+      margin-top: 40px;
+      font-style: italic;
+      color: #777;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
+
 <!-- Hamburger Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
-    <button onclick="location.href='index.html'">🏠 Home</button>
-    <button onclick="location.href='about.html'">👤 About Me</button>
+    <button onclick="location.href='index.html'"> 🏠 Home</button>
+    <button onclick="location.href='about.html'"> 👤 About Me</button>
     <button onclick="location.href='blog.html'">📝 Blog</button>
     <button onclick="location.href='contact.html'">📬 Contact</button>
     <button onclick="location.href='donate.html'">💸 Donate</button>
     <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
     <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
+</div>
 
 <header>
   <div>🌍 Mani Meshkinpoor</div>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 </header>
 
-  <div class="container">
-    <h1>Frequently Asked Questions (FAQ)</h1>
+<div class="container">
+  <h1>❓ Frequently Asked Questions (FAQ)</h1>
 
-    <h2>1. What is this website about?</h2>
-    <p>This is a personal platform where I share my real story, thoughts, and struggles — and ask for honest support. My goal is to reach people who care about human rights, freedom, and truth.</p>
+  <h2>1. What is this website about?</h2>
+  <p>This is a personal platform where I share my real story, thoughts, and struggles — and ask for honest support. My goal is to reach people who care about human rights, freedom, and truth.</p>
 
-    <h2>2. How can I contact you?</h2>
-    <p>For safety reasons, direct contact info isn't public. But if someone reaches out through trusted channels, I can respond after proper trust is built. Please use the "Contact Me" page for updates.</p>
+  <h2>2. How can I contact you?</h2>
+  <p>For safety reasons, direct contact info isn't public. But if someone reaches out through trusted channels, I can respond after proper trust is built. Please use the "Contact Me" page for updates.</p>
 
-    <h2>3. Why not only use social media for support?</h2>
-    <p>Social media is helpful, but not reliable for serious causes like this. People often ignore posts, assume scams, or never engage. A website is permanent, searchable, and gives me space to explain things fully. It's also a sign that I’m serious and invested in change.</p>
+  <h2>3. Why not only use social media for support?</h2>
+  <p>Social media is helpful, but not reliable for serious causes like this. People often ignore posts, assume scams, or never engage. A website is permanent, searchable, and gives me space to explain things fully. It's also a sign that I’m serious and invested in change.</p>
 
-    <h2>4. Are you really seeking asylum?</h2>
-    <p>Yes. I'm trying to escape long-term abuse and lack of basic rights. My asylum case is based on domestic violence and emotional trauma. I live in fear and have no legal protection here.</p>
-    <p>I've tried many paths — including working online — but due to sanctions, scams, and lack of local opportunities, nothing worked. I'm not asking for pity. I’m asking for a chance to live.</p>
+  <h2>4. Are you really seeking asylum?</h2>
+  <p>Yes. I'm trying to escape long-term abuse and lack of basic rights. My asylum case is based on domestic violence and emotional trauma. I live in fear and have no legal protection here.</p>
+  <p>I've tried many paths — including working online — but due to sanctions, scams, and lack of local opportunities, nothing worked. I'm not asking for pity. I’m asking for a chance to live.</p>
 
-    <h2>5. Why not stay and solve family issues peacefully?</h2>
-    <p>In my country, even physical abuse is rarely taken seriously — especially after age 18. Emotional abuse is invisible but even more painful. I’ve been isolated, controlled, and made to feel worthless for years.</p>
-    <p>My ABDL identity is deeply linked to this trauma. It’s not a "fetish" — it’s a coping mechanism rooted in childhood pain. I’ve met others like me, and many suffer in silence. Leaving is my only hope to heal and rebuild.</p>
+  <h2>5. Why not stay and solve family issues peacefully?</h2>
+  <p>In my country, even physical abuse is rarely taken seriously — especially after age 18. Emotional abuse is invisible but even more painful. I’ve been isolated, controlled, and made to feel worthless for years.</p>
+  <p>My ABDL identity is deeply linked to this trauma. It’s not a "fetish" — it’s a coping mechanism rooted in childhood pain. I’ve met others like me, and many suffer in silence. Leaving is my only hope to heal and rebuild.</p>
 
-    <p class="footer-note">This page will be updated regularly. Please check back often for new questions and answers.</p>
-  </div>
-
-  <script>
-    fetch('sidebar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-
-        // تعریف تابع toggleSidebar بعد از لود منو
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      });
-  </script>
+  <p class="footer-note">This page will be updated regularly. Please check back often for new questions and answers.</p>
+</div>
 
 <script>
   function toggleSidebar() {

@@ -49,78 +49,79 @@
   }
   </script>
 
-<!-- styles -->
-<style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <!-- Styles -->
+  <style>
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
-</style>
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+  </style>
 </head>
 <body>
-<!-- Hamburger Sidebar Menu -->
+
+<!-- Sidebar Menu -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
@@ -132,43 +133,26 @@
     <button onclick="location.href='donate.html'">💸 Donate</button>
     <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
     <button onclick="location.href='faq.html'">❓ FAQ</button>
+  </div>
 </div>
 
+<!-- Header -->
 <header>
   <div>🌍 Mani Meshkinpoor</div>
   <div class="menu-btn" onclick="toggleSidebar()">☰</div>
 </header>
 
-  <!-- Main -->
-  <main>
-    <h1>Let's Talk!</h1>
-    <div class="contact-info">
-      <p>📧 Email: <a href="mailto:diaperloveradultbaby5@gmail.com" rel="noopener noreferrer">diaperloveradultbaby5@gmail.com</a></p>
-      <p>📱 Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank" rel="noopener noreferrer">@Survival_Talisman_admin</a></p>
-      <p>🐦 X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank" rel="noopener noreferrer">@I_am_ABDL_2005</a></p>
-    </div>
-  </main>
+<!-- Main -->
+<main>
+  <h1>Let's Talk!</h1>
+  <div class="contact-info">
+    <p>📧 Email: <a href="mailto:diaperloveradultbaby5@gmail.com" rel="noopener noreferrer">diaperloveradultbaby5@gmail.com</a></p>
+    <p>📱 Telegram: <a href="https://t.me/Survival_Talisman_admin" target="_blank" rel="noopener noreferrer">@Survival_Talisman_admin</a></p>
+    <p>🐦 X (Twitter): <a href="https://x.com/I_am_ABDL_2005" target="_blank" rel="noopener noreferrer">@I_am_ABDL_2005</a></p>
+  </div>
+</main>
 
-  <!-- Sidebar Loader + Toggle -->
-  <script>
-    fetch('sidebar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('menu-placeholder').innerHTML = data;
-
-        // Define toggleSidebar after sidebar is loaded
-        window.toggleSidebar = function () {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('overlay');
-          if (sidebar && overlay) {
-            sidebar.classList.toggle('open');
-            overlay.classList.toggle('show');
-          }
-        };
-      })
-      .catch(error => console.error('Error loading sidebar:', error));
-  </script>
-
+<!-- Sidebar Toggle Script -->
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');
