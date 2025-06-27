@@ -4,28 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mani Meshkinpoor Blog</title>
-
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="This is the official personal blog of Mani Meshkinpoor, sharing real-life stories, requests for help, and open connection." />
-  <meta name="keywords" content="Mani Meshkinpoor, help me, donation, blog, real life, refugee, support" />
+  <!-- SEO -->
+  <meta name="description" content="This is the official personal blog of Mani Meshkinpoor..." />
+  <meta name="keywords" content="Mani Meshkinpoor, donation, refugee, support" />
   <meta name="author" content="Mani Meshkinpoor" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph + Twitter -->
   <meta property="og:title" content="Welcome to My Official Website" />
-  <meta property="og:description" content="This is the official website of a real person seeking support and freedom. Discover my journey, learn the truth, and join my mission." />
+  <meta property="og:description" content="Discover my journey and join my mission." />
   <meta property="og:url" content="https://diaperlover2.github.io/" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mani Meshkinpoor - Real Life Blog" />
-  <meta name="twitter:description" content="A personal space to share my life, ask for support, and connect with the world." />
-  <meta name="twitter:site" content="@ManiMeshkinpoor" />
+  <meta name="twitter:description" content="A personal space to share my life." />
 
-  <!-- Google Analytics -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ7JSGT8RN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -34,78 +30,97 @@
     gtag('config', 'G-LQ7JSGT8RN');
   </script>
 
- <style>
-  .menu-btn {
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-  }
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    right: -270px;
-    width: 260px;
-    height: 100%;
-    background: rgba(20, 20, 20, 0.98);
-    color: white;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
-    z-index: 1001;
-    transition: right 0.3s ease;
-    backdrop-filter: blur(6px);
-    border-left: 2px solid #00bcd4;
-  }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1002;
+    }
 
-  .sidebar.open {
-    right: 0;
-  }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -270px;
+      width: 260px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.98);
+      color: white;
+      padding: 20px;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      backdrop-filter: blur(6px);
+      border-left: 2px solid #00bcd4;
+    }
 
-  .overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: none;
-    z-index: 1000;
-  }
+    .sidebar.open {
+      right: 0;
+    }
 
-  .overlay.show {
-    display: block;
-  }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1000;
+    }
 
-  .menu-toggle {
-    font-size: 24px;
-    text-align: right;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
+    .overlay.show {
+      display: block;
+    }
 
-  .menu-items button {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    background: #00bcd4;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
+    .menu-toggle {
+      font-size: 24px;
+      text-align: right;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
 
-  .menu-items button:hover {
-    background: #0197a3;
-  }
+    .menu-items button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .menu-items button:hover {
+      background: #0197a3;
+    }
+
+    header {
+      background: #f4f4f4;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    main {
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
-<!-- Hamburger Sidebar Menu -->
+
+<!-- Overlay -->
 <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
 <div id="sidebar" class="sidebar">
   <div class="menu-toggle" onclick="toggleSidebar()">✖️</div>
   <div class="menu-items">
@@ -117,24 +132,25 @@
     <button onclick="location.href='gallery.html'">🖼️ Gallery</button>
     <button onclick="location.href='faq.html'">❓ FAQ</button>
   </div>
+</div>
 
-  <div id="overlay" onclick="toggleSidebar()"></div>
+<!-- Hamburger Button -->
+<div class="menu-btn" onclick="toggleSidebar()">☰</div>
 
-  <!-- Header -->
-  <header>
-  <div>🌍 Mani Meshkinpoor</div>
-  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
-  </header>
+<!-- Header -->
+<header>
+  🌍 Mani Meshkinpoor Blog
+</header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Welcome to my blog 💖</h1>
-    <p>Here you can read my life story, connect with me, and support me if you'd like 🙏</p>
-    <p>👉 Use the menu above to explore the pages.</p>
-    <p>🛠 This website is constantly being updated.
-      If you encounter any issues, please contact me using the links on the <a href="contact.html">Contact Me</a> page. Thank you! 💌</p>
-  </main>
+<!-- Main Content -->
+<main>
+  <h1>Welcome to my blog 💖</h1>
+  <p>Here you can read my life story, connect with me, and support me if you'd like 🙏</p>
+  <p>👉 Use the menu above to explore the pages.</p>
+  <p>🛠 This website is constantly being updated. If you encounter any issues, please contact me using the links on the <a href="contact.html">Contact Me</a> page. Thank you! 💌</p>
+</main>
 
+<!-- Script -->
 <script>
   function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('open');
